@@ -2,9 +2,10 @@ import streamlit as st
 import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
+
 
 # Load and prepare the FAISS index (load from local if exists)
 @st.cache_resource
