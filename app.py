@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 
@@ -40,7 +40,7 @@ def load_model():
     return generator
 
 def call_local_model(generator, prompt):
-    result = generator(prompt, max_new_tokens=256, temperature=0.5)[0].get("generated_text") or generator(prompt)[0]["text"]
+    result = generator(prompt, max_new_tokens=256)[0].get("generated_text") or generator(prompt)[0]["text"]
     return result.strip()
 
 def ask_question(faiss_index, generator, query):
