@@ -1,17 +1,25 @@
 # 🩺 Medical Chatbot – PDF-Based Q&A with Local LLMs
 
-Welcome to **Medical Chatbot**, a locally-running AI assistant that answers medical questions based on the content of a medical textbook. 
-It uses **LangChain**, **FAISS**, and **HuggingFace Transformers**, all running offline — no API keys required.
-
+The Medical Chatbot is a local, privacy-respecting AI assistant that answers medical questions based on the content of a PDF textbook. 
+It is designed for offline use, requiring no internet and no API keys, making it ideal for educational, private, or restricted environments.
 
 ## 🚀 Features
-
 - 📘 **PDF-Based Knowledge**: Load a medical textbook and answer questions using its content.
 - 💡 **Context-Aware Answers**: Relevant content is retrieved via FAISS vector search before generating responses.
 - 🤖 **Local LLM**: Uses HuggingFace's `flan-t5-base` to generate answers — 100% local, no OpenAI.
 - 🧠 **Semantic Search with Embeddings**: Powered by `all-MiniLM-L6-v2`.
 - ⚡ **No Internet Needed**: After first-time setup, it runs entirely offline.
 - 🖥️ **Streamlit Interface**: Clean, interactive, and easy to use.
+
+All answers are generated using only the context retrieved from the medical PDF, ensuring responses remain grounded and trustworthy.
+
+---
+
+🎯 Use Cases
+- ✅ Medical students and educators needing quick, contextual answers
+- ✅ Environments with no internet access or privacy concerns
+- ✅ Developers building Retrieval-Augmented Generation (RAG) apps
+- ✅ Anyone interested in combining LLMs with vector search and document understanding
 
 ---
 
@@ -34,12 +42,22 @@ It uses **LangChain**, **FAISS**, and **HuggingFace Transformers**, all running 
 
 ---
 
-## 🛡 Disclaimer
-This chatbot is intended for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
+## 📦 Tech Stack
+- Layer	Tool
+- UI	Streamlit
+- PDF Loader	LangChain PyPDFLoader
+- Text Splitter	LangChain RecursiveCharacterTextSplitter
+- Embeddings	sentence-transformers/all-MiniLM-L6-v2
+- Vector DB	FAISS
+- LLM	google/flan-t5-base
+- Pipeline	HuggingFace text2text-generation
+
+ ---
+ 
+## 📬 Get in Touch
+- aakashpawar496@gmail.com
+- Made by AAKASH PAWAR
+
+⚠️ This chatbot is for educational and demonstration purposes only. It is not a replacement for professional medical advice. Always consult a qualified healthcare provider for medical concerns.
 
 ---
-
-## 📬 Contact
-
-- aakashpawar496@gmail.com
-- Built by Aakash Pawar
