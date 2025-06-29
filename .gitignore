@@ -1,0 +1,23 @@
+# Secret keys & environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# FAISS and embedding index files
+*.faiss
+*.pkl
+medical_index/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode & OS junk
+.vscode/
+.DS_Store
+Thumbs.db
+
+
+# Changes
+echo "medical_index/" >> .gitignore
