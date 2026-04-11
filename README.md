@@ -1,4 +1,4 @@
-# 🩺 Medical RAG Based on LLMs
+# 🩺 Medical Based RAG System
 
 Medical RAG is a local, privacy-respecting AI assistant that answers medical questions based on the content of a PDF textbook. 
 It is designed for offline use, requiring no internet and no API keys, making it ideal for educational, private, or restricted environments.
